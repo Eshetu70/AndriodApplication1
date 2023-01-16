@@ -1,0 +1,39 @@
+#include <stdbool.h>
+#include <stdio.h>
+// stdbool library for boolean variable
+
+int main() {
+  // This is main function
+  // it doesn't expect any argument and
+  // it return an integer
+
+  // Deaclaring variables
+  int N;
+
+  // Taking input from user
+  scanf("%d", &N);
+
+  // Loop to print prime numbers
+  for (int i = 2; i < N; i++) {
+    // Declaring boolean variable
+    bool is_prime = true;
+
+    // Loop to check if i is prime or not.
+    for (int j = 2; j < i; j++) {
+      if (i % j == 0) {
+        // This condition check if i is divisible by j
+        // if this is case then the number is not prime.
+        is_prime = false;
+        break;
+      }
+    }
+
+    if (is_prime == true) {
+      // This condition mean the number is prime
+      // so we print it and newline.
+      printf("%d\n", i);
+    }
+  }
+  return 0;
+}
+}

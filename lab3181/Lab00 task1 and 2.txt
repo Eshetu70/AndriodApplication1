@@ -1,0 +1,35 @@
+
+//Name: Eshetu T. Wekjira
+//Lab00: Task 1 and Task 2
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main() {
+
+  // Deaclaring variables
+  int Num;
+
+  // Taking input from user
+  printf("Please enter a number greater than or equal to two: ");
+  scanf("%d", &Num);
+
+  // Loop to print prime numbers
+  for (int i = 2; i < Num; i++) {
+    // Declaring boolean variable
+    bool is_prime = true;
+    // Loop to check if i is prime or not.
+    for (int j = 2; j < i; j++) {
+      if (i % j == 0) {
+        is_prime = false;
+        break;
+      }
+    }
+    // This condition mean the number is prime
+    if (is_prime == true) {
+
+      printf("%d,", i);
+    }
+  }
+  return 0;
+}

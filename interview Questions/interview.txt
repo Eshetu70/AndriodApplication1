@@ -1,0 +1,26 @@
+Interview Queestion document
+
+Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+
+Return the running sum of nums.
+
+
+class Solution {
+    public int[] runningSum(int[] nums) {
+      
+            // create a new array as same size of input array
+        int[] ans=new int[nums.length];
+        // copy first element as it is
+        ans[0]=nums[0];
+        // run the loop from 1 to n-1
+        for(int i=1;i<nums.length;i++)
+        {
+            // add current element of input array with previous element new array
+            // and put this sum in new array
+            ans[i]=nums[i]+ans[i-1];
+        }
+        // return new array ans
+        return ans;
+        
+    }
+}

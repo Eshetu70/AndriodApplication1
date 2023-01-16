@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+ 
+ int main()  // the place where programs are excuted.
+ {
+     int size = 10; // declare and intializing values
+     int array[size]; //declaring arrays
+     cout<<"please enter the 10 numbers one by one.\n"; //dispaly and aske user to input
+     
+     int i, k, j; //declaring variables.
+     for (i=0; i<size; i++)  // use for loop for input values one by one
+     {
+         cin>>array[i]; //allow user to input from keyboard.
+     
+     } //end for loop
+     cout<< "\nPrinting the array in reverse order.\n"; // display on screen
+       
+       // use for and array to inverse input value
+       for(k=size-1; k>=0; k--)
+       cout<<array[k]<<" ";
+       // use Bubble sort in order to arrenge array fro lowest to largest.
+       int value_0; // declaring variables to hold temporary values.
+       
+       for(i=0; i<size-1; i++)
+       {
+           for(j=0; j<size-i-1; j++)
+           {
+               
+              if(array[j]>array[j+1])
+              {
+               value_0 =array[j];
+               array[j]=array[j+1];
+               array[j+1]=value_0;
+               
+           }
+       }
+ }
+ 
+ // display the sorted arrays
+ cout<<"\n\nArranged array is.\n";
+ for(i=0; i<10; i++)
+ cout<<array[i]<<endl;
+ }
+ 
