@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_emai">Enter Email</string>
+    <string name="enter_name">Enter Names</string>
+    <string name="demo">demo</string>
+    <string name="Enter">Enter Emails</string>
+    <string name="email_label">Label Email</string>
 </resources>
