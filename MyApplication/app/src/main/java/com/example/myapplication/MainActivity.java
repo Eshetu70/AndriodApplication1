@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
         textViewProgress =findViewById(R.id.textViewProgress);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-                Log.d(TAG, "onProgressChanged: "+ progress);
-                textViewProgress.setText(String.valueOf(progress));
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                Log.d(TAG, "onProgressChanged: "+ i);
+                textViewProgress.setText(String.valueOf(i));
             }
 
             @Override
