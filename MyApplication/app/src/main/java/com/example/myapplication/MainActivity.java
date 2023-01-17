@@ -41,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 Log.d(TAG, "onProgressChanged: "+ i);
-                textViewProgress.setText(String.valueOf(i));
+                //textViewProgress.setText(String.valueOf(i));
+
+                textViewProgress.setText(i);
             }
 
             @Override
