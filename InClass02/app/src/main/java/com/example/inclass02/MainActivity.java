@@ -40,7 +40,13 @@ public class MainActivity extends AppCompatActivity {
 button5dis.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        input = Double.parseDouble(editTextNumber.getText().toString());
+        try {
+            input = Double.parseDouble(editTextNumber.getText().toString());
+        }catch(Exception e){
+            Toast.makeText(MainActivity.this, "Input valid number", Toast.LENGTH_SHORT).show();
+        }
+
+
         value = input * 0.05;
         value2 = input - value;
         textViewdiscount.setText("Discount %:"+Double.toString(value));
@@ -50,7 +56,11 @@ button5dis.setOnClickListener(new View.OnClickListener() {
 button10dis.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        input = Double.parseDouble(editTextNumber.getText().toString());
+        try {
+            input = Double.parseDouble(editTextNumber.getText().toString());
+        }catch(Exception e){
+            Toast.makeText(MainActivity.this, "Input valid number", Toast.LENGTH_SHORT).show();
+        }
         value = input * 0.1;
         value2 = input - value;
         textViewdiscount.setText("Discount %:"+Double.toString(value));
@@ -61,7 +71,11 @@ button10dis.setOnClickListener(new View.OnClickListener() {
 button15dis.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        input = Double.parseDouble(editTextNumber.getText().toString());
+        try {
+            input = Double.parseDouble(editTextNumber.getText().toString());
+        }catch(Exception e){
+            Toast.makeText(MainActivity.this, "Input valid number", Toast.LENGTH_SHORT).show();
+        }
         value = input * 0.15;
         value2 = input - value;
         textViewdiscount.setText("Discount %:"+Double.toString(value));
@@ -72,7 +86,13 @@ button15dis.setOnClickListener(new View.OnClickListener() {
 button20dis.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        input = Double.parseDouble(editTextNumber.getText().toString());
+        try {
+            input = Double.parseDouble(editTextNumber.getText().toString());
+        }catch(Exception e){
+            String clear =" ";
+            editTextNumber.setText(clear);
+            Toast.makeText(MainActivity.this, "Input valid number", Toast.LENGTH_LONG).show();
+        }
         value = input * 0.2;
         value2 = input - value;
         textViewdiscount.setText("Discount %:"+Double.toString(value));
@@ -82,7 +102,11 @@ button20dis.setOnClickListener(new View.OnClickListener() {
 button50dis.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        input = Double.parseDouble(editTextNumber.getText().toString());
+        try {
+            input = Double.parseDouble(editTextNumber.getText().toString());
+        }catch(Exception e){
+            Toast.makeText(MainActivity.this, "Input valid number", Toast.LENGTH_SHORT).show();
+        }
         value = input * 0.5;
         value2 = input - value;
         textViewdiscount.setText("Discount %:"+Double.toString(value));
@@ -92,8 +116,10 @@ button50dis.setOnClickListener(new View.OnClickListener() {
         clearid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String clear ="";
                 textViewdiscount.setText("Discount %:");
                 textView3Price.setText("Discounted Price:");
+                editTextNumber.setText(clear);
 
             }
         });
